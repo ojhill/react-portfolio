@@ -6,6 +6,9 @@ export default function Layout({ children }) {
       <nav className={styles.nav}>
         <ul>
           <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
             <Link href="/projects">Projects</Link>
           </li>
         </ul>

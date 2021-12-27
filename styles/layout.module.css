@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  z-index: 1000;
+  font-family: "Poppins";
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav li {
+  list-style: none;
+  font-size: x-large;
+  /* color: #efefef; */
+}

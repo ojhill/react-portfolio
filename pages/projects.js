@@ -14,8 +14,8 @@ return <Layout>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          image="/img/IMG_1553.jpeg"
+          alt="run cmc logo"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

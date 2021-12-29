@@ -7,7 +7,7 @@ import GithubIcon from 'svgicon/github.svg';
 import EmailIcon from 'svgicon/email.svg';
 import Layout from 'Layout';
 import FeedIcon from '@mui/icons-material/Feed';
-
+import Liquid from "components/liquid";
 export default function Home() {
   return (
     <Layout>
@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <a title="Linked in" href="https://www.linkedin.com/in/orenthal-hill/" target="_blank" rel="noreferrer">
+      {/* <a title="Linked in" href="https://www.linkedin.com/in/orenthal-hill/" target="_blank" rel="noreferrer">
         <LinkedinIcon />
       </a>
 
@@ -34,7 +34,8 @@ export default function Home() {
         rel="noreferrer"
       >
         <FeedIcon fontSize="large" />
-      </a>
+      </a> */}
+    <Liquid text="Orenthal Hill"></Liquid>
     </Layout>
   );
 }

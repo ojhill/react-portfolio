@@ -15,12 +15,14 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import FeedIcon from '@mui/icons-material/Feed';
+import CloseIcon from "@mui/icons-material/Close";
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 
 const NavbarActions = [
   {
-    href: "/projects",
-    label: "Projects",
-  }
+    href: '/projects',
+    label: 'Projects',
+  },
 ];
 const SidebarActions = [
   { name: 'Linked In', icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/orenthal-hill/' },
@@ -33,12 +35,10 @@ const SidebarActions = [
   },
 ];
 
-
-
 export default function Layout({ children }) {
   const [sidebarIsOpen, setSidebarIsOpen] = React.useState(true);
   return (
-    <div>
+    <div className='page'>
       {children}
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
@@ -48,10 +48,11 @@ export default function Layout({ children }) {
             </Link>
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
-         
-          <MenuItem>
-            <Link href="/projects">Projects</Link>
-          </MenuItem>
+          {NavbarActions.map(action => (
+            <MenuItem key={action.href}>
+              <Link href={action.href}>{action.label}</Link>
+            </MenuItem>
+          ))}
         </Toolbar>
       </AppBar>
 
@@ -59,18 +60,15 @@ export default function Layout({ children }) {
         ariaLabel="SpeedDial basic example"
         color="secondary"
         sx={{ position: 'fixed', bottom: 80, left: 20 }}
-        icon={<MoreIcon />}
+        icon={<SpeedDialIcon icon={<MoreIcon />} openIcon={<CloseIcon />}/>}
         open={sidebarIsOpen}
-        onClick={() =>setSidebarIsOpen(!sidebarIsOpen)}
+        onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
       >
         {SidebarActions.map(action => (
           <SpeedDialAction
             key={action.href}
             icon={
-              <a href={action.href}
-                target="blank"
-                rel="noreferrer"
-                >
+              <a href={action.href} target="blank" rel="noreferrer">
                 {action.icon}
               </a>
             }

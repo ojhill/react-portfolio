@@ -24,10 +24,10 @@ export default function Liquid({ text, width = '600px', height = '100%' }) {
           </path>
         </pattern>
       </defs>
-      <text text-anchor="middle" x="50" y="15" font-size="17" fill="white" fill-opacity="0.1">
+      <text textAnchor="middle" x="50" y="15" fontSize="17" fill="white" fillOpacity="0.1">
         {text}
       </text>
-      <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="1">
+      <text textAnchor="middle" x="50" y="15" fontSize="17" fill="url(#wave)" fillOpacity="1">
        {text}
       </text>
     </svg>

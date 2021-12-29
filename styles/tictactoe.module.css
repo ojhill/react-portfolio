@@ -1,0 +1,19 @@
+.page {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+  }
+  
+  .square {
+    border: 1px solid white;
+  }

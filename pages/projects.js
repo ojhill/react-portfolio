@@ -30,6 +30,12 @@ const project = [
   href:"https://github.com/ojhill/codeup-web-exercises/blob/main/js/weather_map.js",
   title: "Weather Map Project",
   description: "The Weather Map Project was developed utilizing the Mapbox API, OpenWeather API, HTML, CSS, JavaScript, and Bootstrap  It allows users to dynamically select a city to view an interactive map, look up the current weather conditions and five day forecast.."
+},
+{
+  image: "/vercel.svg",
+  href:"/tictactoe",
+  title: "tic tac toe",
+  description: "tic tac toe react tuturial"
 }
 ]
 export default function Projects (){

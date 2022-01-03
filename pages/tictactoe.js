@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "styles/tictactoe.module.css";
-import Layout from "Layout";
-import Button from "@mui/material/Button";
+import React from 'react';
+import styles from 'styles/tictactoe.module.css';
+import Layout from 'Layout';
+import Button from '@mui/material/Button';
 
 function Square({ value, onClick }) {
   return (
@@ -23,15 +23,15 @@ function Board() {
     if (squares[index]) return;
 
     if (player === 1) {
-      squares[index] = "X";
+      squares[index] = 'X';
       setPlayer(2);
     } else {
-      squares[index] = "O";
+      squares[index] = 'O';
       setPlayer(1);
     }
     setSquares(squares);
 
-    if (squares.every((value) => value)) {
+    if (squares.every(value => value)) {
       setIsDone(true);
     }
   }
@@ -67,11 +67,7 @@ function Board() {
       <h2>Its your turn player {player}</h2>
       <div className={styles.board}>
         {squares.map((value, index) => (
-          <Square
-            key={index}
-            value={value}
-            onClick={() => handleClick(index)}
-          />
+          <Square key={index} value={value} onClick={() => handleClick(index)} />
         ))}
       </div>
       {isDone && <Button onClick={resetBoard}>Reset</Button>}

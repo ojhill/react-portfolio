@@ -42,7 +42,7 @@ function Board() {
     setIsDone(false);
   }
 
-  render() {
+  function render() {
     const winner = calculateWinner(this.state.squares);
     let status;
     if (winner) {

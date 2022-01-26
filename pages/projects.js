@@ -14,7 +14,7 @@ const project = [
   description: "Run//CMC is a full stack web application that curates a music collage utilizing album artwork (inspired by topsters), ignites music discovery, and provides an online community platform to discuss favorite albums and topsters. Run//CMC was built by five web developers using the following technologies: HTML, CSS, MDBootstrap, JavaScript, jQuery, Spring Boot, ThymeLeaf, Java, MySQL, and the Spotify Web API. Check out the deployed app here."
 },
 {
-  image: "/img/ad-image.png",
+  image: "/img/ad_image.png",
   href:"https://github.com/Team-1-Adlister/adlister-project",
   title: "The Ad-Lister",
   description: "The Ad-lister Project was a group project using backend server side logic for a dynamic user experience.  It utilizes Object-Oriented Programming via Java.  Communication to the server is done via MySQL, Javabeans, Servlets, and JSPs. The project has the ability to perform CRUD operations and is implemented using the MVC (Model-View-Controller) methodology. The program is designed to perform similar to Craigslist. It provides a user the freedom to login to the site, create and view ads, as well as search and delete ads accordingly using intentional redirection as the user navigates through the site."
@@ -51,7 +51,7 @@ return <Layout>
       >
   {project.map((project) => (
     <Card key={project.href} sx ={{ maxWidth: 300 }}>
-    <a href={project.href} tatget="blank" rel="noreferrer">
+    <a href={project.href} target="blank" rel="noreferrer">
       <CardActionArea>
         <CardMedia
           component="img"
